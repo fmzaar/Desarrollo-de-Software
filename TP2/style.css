@@ -1,0 +1,174 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: #494949;
+}
+
+header h1 {
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+section {
+    margin: 15px 15px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+hr {
+    border: 2px solid #505050;
+    border-radius: 5px;
+    margin: 0px 0px;
+}
+
+#propTexto blockquote {
+    background-color: #ebebeb;
+    padding: 10px;
+    color: #5c5c5c;
+    border-left: 3px solid #bbbbbb;
+    margin: 0px 0px;
+}
+
+.caja1 {
+    border: 2px solid black;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 8px 10px -3px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 2px 8px 10px -3px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 2px 8px 10px -3px rgba(0, 0, 0, 0.36);
+}
+
+.caja1 p {
+    padding: 5px 15px;
+}
+
+.caja2 {
+    border: 3px solid black;
+    margin: 15px;
+    border-radius: 5px;
+    background-color: #ffdba1;
+    box-shadow: 2px 8px 10px -3px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 2px 8px 10px -3px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 2px 8px 10px -3px rgba(0, 0, 0, 0.36);
+}
+
+.caja2 p {
+    padding: 5px 15px;
+}
+
+.relativo {
+    position: relative;
+    top: 5px;
+    left: 0px;
+    background-color: rgb(220, 255, 243);
+}
+
+.relativo p {
+    padding: 15px;
+}
+
+.absoluto {
+    background-color: rgb(0, 147, 147);
+    border-radius: 5px;
+    position: absolute;
+    top: 70%;
+    left: 41%;
+}
+
+.absoluto p {
+    color: white;
+    padding: 15px;
+    margin: 0px;
+}
+
+#gridCss {
+    margin-top: 4%;
+}
+
+.grid-container {
+    display: grid;
+    margin-top: 1%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+}
+
+.grid-item {
+    background-color: #6a6aff;
+    width: 95%;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.animacion {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: background-color 0.5s ease;
+}
+
+.animacion:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.mover {
+    position: absolute;
+    left: 150px;
+    margin: 35px;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border-radius: 100px;
+    animation: mover 5s linear infinite;
+}
+
+@mover {
+    position: absolute;
+    animation: mover 5s linear infinite;
+}
+
+@keyframes mover {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        background-color: #cdbdff;
+    }
+
+    section {
+        padding: 15px;
+        width: 78%;
+    }
+
+    .absoluto {
+        top: 106%;
+        left: 5%;
+    }
+
+    #animacionesCss {
+        height: 600px;
+    }
+}
