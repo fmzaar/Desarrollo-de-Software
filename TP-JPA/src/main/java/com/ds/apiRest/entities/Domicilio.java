@@ -1,11 +1,13 @@
 package com.ds.apiRest.entities;
 
 import jakarta.persistence.*;
+import org.hibernate.envers.Audited;
 
 import java.io.Serializable;
 
 @Entity
 @Table(name = "domicilio")
+@Audited
 public class Domicilio implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +19,10 @@ public class Domicilio implements Serializable {
         this.id = id;
         this.nombreCalle = nombreCalle;
         this.numero = numero;
+    }
+
+    public Domicilio() {
+
     }
 
     public Long getId() {

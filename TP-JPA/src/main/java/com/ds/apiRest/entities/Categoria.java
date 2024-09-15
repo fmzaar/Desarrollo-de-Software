@@ -1,11 +1,15 @@
 package com.ds.apiRest.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import org.hibernate.envers.Audited;
 
 import java.io.Serializable;
 
 @Entity
 @Table(name = "categoria")
+@Audited
+@Data
 public class Categoria  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +19,10 @@ public class Categoria  implements Serializable {
     public Categoria(Long id, String denominacion) {
         this.id = id;
         this.denominacion = denominacion;
+    }
+
+    public Categoria() {
+
     }
 
     public Long getId() {

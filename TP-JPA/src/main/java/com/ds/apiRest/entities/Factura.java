@@ -1,6 +1,7 @@
 package com.ds.apiRest.entities;
 
 import jakarta.persistence.*;
+import org.hibernate.envers.Audited;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "factura")
+@Audited
 public class Factura implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +37,10 @@ public class Factura implements Serializable {
         this.fecha = fecha;
         this.numero = numero;
         this.cliente = cliente;
+    }
+
+    public Factura() {
+
     }
 
     public Cliente getCliente() {

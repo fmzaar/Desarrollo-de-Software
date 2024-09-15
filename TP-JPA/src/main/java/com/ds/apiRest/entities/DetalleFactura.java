@@ -1,11 +1,15 @@
 package com.ds.apiRest.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import org.hibernate.envers.Audited;
 
 import java.io.Serializable;
 
 @Entity
 @Table(name = "detalle_factura")
+@Audited
+@Data
 public class DetalleFactura implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +32,10 @@ public class DetalleFactura implements Serializable {
         this.cantidad = cantidad;
         this.subtotal = subtotal;
         this.articulo = articulo;
+    }
+
+    public DetalleFactura() {
+
     }
 
     public Articulo getArticulo() {
