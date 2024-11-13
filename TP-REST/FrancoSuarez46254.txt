@@ -1,2 +1,0 @@
-Comision 3K10
-Link del repositorio: https://github.com/fmzaar/Desarrollo-de-Software/tree/main/TP-REST
